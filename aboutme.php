@@ -30,17 +30,17 @@
 
                     <div class="nav_list">
 
-                        <a href="index.html" class="nav_link active"> <i class='bx bx-home nav_icon'></i> <span
+                        <a href="index.php" class="nav_link active"> <i class='bx bx-home nav_icon'></i> <span
                                 class="nav_name">Home</span></a>
 
-                        <a href="assignments.html" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span
+                        <a href="assignments.php" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span
                                 class="nav_name">Assignments</span>
 
-                            <a href="aboutme.html" class="nav_link"> <i class='bx bx-user nav_icon'></i><span
+                            <a href="aboutme.php" class="nav_link"> <i class='bx bx-user nav_icon'></i><span
                                     class="nav_name">About
                                     me</span></a>
 
-                            <a href="personalprojects.html" class="nav_link"> <i class='bx bx-cube nav_icon'></i><span
+                            <a href="personalprojects.php" class="nav_link"> <i class='bx bx-cube nav_icon'></i><span
                                     class="nav_name">Personal
                                     Projects</span></a>
                     </div>
