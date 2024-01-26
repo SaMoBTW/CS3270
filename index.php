@@ -1,9 +1,5 @@
 <?php
 
-$CONFIG = parse_ini_file('../config.ini', true);
-$environment = $config['ENVIRONMENT'];
-$URL_BASE = $config[$environment]['URL_BASE'];
-
 // Variables and arrays | Data
 include_once 'src/data.view.php';
 
