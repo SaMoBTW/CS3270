@@ -4,7 +4,7 @@ $name = 'Samir Mahmoud';
 
 $personalGitHub = 'https://github.com/SaMoBTW';
 
-
+$siteRepo = 'https://github.com/SaMoBTW/CS3270';
 
 $navArray = [
     'Home',
@@ -13,8 +13,6 @@ $navArray = [
     'Personal Projects',
     'CS3270 Advanced Web Programming',
 ];
-
-
 
 
 ?>

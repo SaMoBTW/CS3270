@@ -203,6 +203,7 @@ a {
     padding-top: 2rem;
     color: #4723D9;
     font-weight: 800;
+    margin-top: 50px;
 }
 
 
@@ -227,7 +228,7 @@ a {
 
 #aboutme-container {
     border-radius: 25px;
-    padding-bottom: 7.5%;
+    padding-bottom: 10%;
 }
 
 #myname-h3 {
