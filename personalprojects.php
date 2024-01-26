@@ -6,7 +6,6 @@ include_once 'src/data.view.php';
 include_once 'src/head.view.php';
 ?>
 
-<body className='snippet-body'>
 
     <body id="body-pd">
         <header class="header" id="header">
@@ -15,9 +14,8 @@ include_once 'src/head.view.php';
             <div class="header_img">
                 <img src="images/duckimg.png" alt="">
             </div>
-
-
         </header>
+        
         <!-- navigation bar  -->
         <?php include_once 'src/navbar.view.php'; ?>
 

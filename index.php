@@ -1,4 +1,9 @@
 <?php
+
+$CONFIG = parse_ini_file('../config.ini', true);
+$environment = $config['ENVIRONMENT'];
+$URL_BASE = $config[$environment]['URL_BASE'];
+
 // Variables and arrays | Data
 include_once 'src/data.view.php';
 
@@ -21,7 +26,8 @@ include_once 'src/head.view.php';
 
     <!--Content Container start-->
     <main>
-      <h1>Main Content</h1>
+      <h1 class="Assignment-title">Latest Assignment</h1>
+      <?php include_once('src/aboutme.view.php') ?>
     </main>
     <!--Content Container end-->
 

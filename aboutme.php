@@ -6,7 +6,7 @@ include_once 'src/data.view.php';
 include_once 'src/head.view.php';
 ?>
 
-<body className='snippet-body'>
+
 
     <body id="body-pd">
         <header class="header" id="header">
