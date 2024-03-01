@@ -18,12 +18,11 @@ include_once 'src/head.view.php';
         </header>
 
         <!-- navigation bar  -->
-        <?php include_once 'src/navbar.view.php'; ?>
+        <?php include_once('src/navbar.view.php') ?>
 
         <!--Container Main start-->
         <?php include_once("src/aboutme.view.php") ?>
         <!--Container Main end-->
-
 
         <!-- Navbar Specific Scripts -->
         <?php include_once 'src/navbar.scripts.view.php'; ?>
