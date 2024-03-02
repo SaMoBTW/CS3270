@@ -64,4 +64,20 @@ $projects =
             ],
     ];
 
+class projects
+{
+    public $projects;
+    public $color;
+
+    function set_projects($projects)
+    {
+        $this->projects = $projects;
+    }
+    function get_name()
+    {
+        return $this->name;
+    }
+}
+
+
 ?>
