@@ -206,6 +206,9 @@ a {
     margin-top: 50px;
 }
 
+.purple-text {
+    color: #4723D9;
+}
 
 .accordion-body {
     width: max-content;
@@ -238,4 +241,19 @@ a {
 
 .card-btn {
     background-color: #4723D9;
+}
+
+/* Project's page */
+
+.gap {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.left-margin {
+    margin-left: 5px;
+}
+
+.card-title {
+    color: #4723D9;
 }
