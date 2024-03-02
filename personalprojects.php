@@ -18,8 +18,8 @@ include_once 'src/head.view.php';
     
     <!-- navigation bar  -->
     <?php include_once 'src/navbar.view.php'; ?>
+
     <!--Container Main start-->
-    <main>
     <div class="row">
 
         <div class="col-md-6">
@@ -96,10 +96,7 @@ include_once 'src/head.view.php';
                 </div>
             </div>
         </div>
-
-
     </div>
-    </main>
     <!--Container Main end-->
     
     <!-- Navbar Specific Scripts -->
