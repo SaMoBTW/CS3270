@@ -20,7 +20,13 @@ include_once 'src/head.view.php';
     <?php include_once 'src/navbar.view.php'; ?>
 
     <!--Container Main start-->
-       <?php include_once("src/projects.view.php") ?>
+
+        <!-- Project's object -->
+       <?php
+       $projectRenderer = new ProjectCardRenderer($projects);
+       $projectRenderer->renderProjectCards();
+       ?>
+       
     <!--Container Main end-->
     
     <!-- Navbar Specific Scripts -->

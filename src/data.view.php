@@ -64,20 +64,59 @@ $projects =
             ],
     ];
 
-class projects
+class ProjectCard
 {
-    public $projects;
-    public $color;
+    private $title;
+    private $languages;
+    private $description;
+    private $link;
+    private $image;
 
-    function set_projects($projects)
+    public function __construct($title, $languages, $description, $link, $image)
     {
-        $this->projects = $projects;
+        $this->title = $title;
+        $this->languages = $languages;
+        $this->description = $description;
+        $this->link = $link;
+        $this->image = $image;
     }
-    function get_name()
+
+    public function render()
     {
-        return $this->name;
+        echo '<div class="col-md-6">';
+        echo '<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">';
+        echo '<div class="col-auto d-none d-lg-block">';
+        echo '<img src="' . $this->image . '" class="card-img-top" alt="...">';
+        echo '</div>';
+        echo '<div class="col p-4 d-flex flex-column position-static">';
+        echo '<h3 class="mb-0 gap card-title">' . $this->title . '</h3>';
+        echo '<p class="mb-1 text-muted gap left-margin">' . $this->languages . '</p>';
+        echo '<h5 class="card-text mb-auto gap left-margin">' . $this->description . '</h5>';
+        echo '<a href="' . $this->link . '" target="_blank" class="stretched-link btn-primary gap left-margin purple-text">Github Repo</a>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
     }
 }
 
+class ProjectCardRenderer
+{
+    private $projects;
+
+    public function __construct($projects)
+    {
+        $this->projects = $projects;
+    }
+
+    public function renderProjectCards()
+    {
+        echo "<div class='row'>";
+        foreach ($this->projects as $project) {
+            $projectCard = new ProjectCard($project['title'], $project['languages'], $project['description'], $project['link'], $project['image']);
+            $projectCard->render();
+        }
+        echo "</div>";
+    }
+}
 
 ?>
