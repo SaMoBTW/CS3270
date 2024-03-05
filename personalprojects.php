@@ -18,31 +18,16 @@ include_once 'src/head.view.php';
     
     <!-- navigation bar  -->
     <?php include_once 'src/navbar.view.php'; ?>
+
     <!--Container Main start-->
-    <main>
 
-        <div class="card" style="width: 18rem;">
-          <img src="images/tindogss.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">TinDog</h5>
-            <p class="card-text">Simple webpage made with bootstrap</p>
-            <p class="card-text">HTML, CSS, BootStrap</p>
-            <div class="container">
-                <div class="row">
-                        <div class="col text-center">
-            <a href="https://samobtw.github.io/Tindog/" target="_blank" class="btn btn-primary card-btn"><i class='bx bxl-github nav_icon'></i></a>
-            <a href="https://samobtw.github.io/Tindog/" target="_blank" class="btn btn-primary card-btn"><i class='bx bx-desktop nav_icon'></i></a>
-                        </div>
-                    </div>
-                </div>
-          </div>
-        </div>
-
-        
-
-        
-
-    </main>
+        <!-- Project's object -->
+       <?php
+       $projectRenderer = new ProjectCardRenderer($projects);
+       $projectRenderer->renderProjectCards();
+       ?>
+       <!-- Project's object -->
+       
     <!--Container Main end-->
     
     <!-- Navbar Specific Scripts -->

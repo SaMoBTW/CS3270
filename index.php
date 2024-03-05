@@ -23,7 +23,7 @@ include_once 'src/head.view.php';
     <!--Content Container start-->
     <main>
       <h1 class="Assignment-title">Latest Assignment</h1>
-      <?php include_once('src/aboutme.view.php') ?>
+      <?php include_once('src/projects.view.php') ?>
     </main>
     <!--Content Container end-->
 
