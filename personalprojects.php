@@ -26,6 +26,7 @@ include_once 'src/head.view.php';
        $projectRenderer = new ProjectCardRenderer($projects);
        $projectRenderer->renderProjectCards();
        ?>
+       <!-- Project's object -->
        
     <!--Container Main end-->
     
