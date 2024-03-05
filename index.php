@@ -23,7 +23,10 @@ include_once 'src/head.view.php';
     <!--Content Container start-->
     <main>
       <h1 class="Assignment-title">Latest Assignment</h1>
-      <?php include_once('src/projects.view.php') ?>
+       <?php
+       $projectRenderer = new ProjectCardRenderer($projects);
+       $projectRenderer->renderProjectCards();
+       ?>
     </main>
     <!--Content Container end-->
 
