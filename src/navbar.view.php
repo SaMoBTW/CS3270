@@ -21,6 +21,9 @@
               <a href="personalprojects.php" class="nav_link"> <i class='bx bx-cube nav_icon'></i><span
                   class="nav_name"><?php echo $navArray[3]; ?></span></a>
 
+                  <a href="resume.php" class="nav_link"> <i class='bx bx-spreadsheet nav_icon'></i><span
+                  class="nav_name"><?php echo $navArray[5]; ?></span></a>
+
           </div>
 
           </div>  
