@@ -1,4 +1,14 @@
 <?php
+session_start();
+
+// Check if the user is not logged in, redirect to the login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: admin.php");
+    exit;
+}
+?>
+
+<?php
 
 // Variables and arrays | Data
 include_once 'src/data.view.php';
@@ -11,12 +21,11 @@ include_once 'src/head.view.php';
     
     <header class="header" id="header">
       <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-      <h1 id="course-title">CS3270 Advanced Web Programming</h1>
-      <a href="admin.php">
+      <h1 id="course-title">Welcome, <?php echo ucfirst($_SESSION["username"]); ?>
+</h1>
       <div class="header_img">
         <img src="images/duckimg.png" alt="">
       </div>
-      </a>
     </header>
 
     <!-- navigation bar  -->
@@ -24,11 +33,10 @@ include_once 'src/head.view.php';
 
     <!--Content Container start-->
     <main>
-      <h1 class="Assignment-title">Latest Assignment</h1>
-       <?php
-       $projectRenderer = new ProjectCardRenderer($projects);
-       $projectRenderer->renderProjectCards();
-       ?>
+
+        <h1>Home Page</h1>
+        <p><a href="admin.php">Logout</a></p>
+
     </main>
     <!--Content Container end-->
 

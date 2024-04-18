@@ -11,12 +11,10 @@ include_once 'src/head.view.php';
     
     <header class="header" id="header">
       <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-      <h1 id="course-title">CS3270 Advanced Web Programming</h1>
-      <a href="admin.php">
+      <h1 id="course-title">Contact Me</h1>
       <div class="header_img">
         <img src="images/duckimg.png" alt="">
       </div>
-      </a>
     </header>
 
     <!-- navigation bar  -->
@@ -24,11 +22,12 @@ include_once 'src/head.view.php';
 
     <!--Content Container start-->
     <main>
-      <h1 class="Assignment-title">Latest Assignment</h1>
-       <?php
-       $projectRenderer = new ProjectCardRenderer($projects);
-       $projectRenderer->renderProjectCards();
-       ?>
+          <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+            <input name="email" type="text" class="feedback-input" placeholder="Email" />
+            <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+            <input type="submit" value="SUBMIT"/>
+          </form>
     </main>
     <!--Content Container end-->
 

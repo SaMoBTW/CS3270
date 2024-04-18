@@ -24,6 +24,11 @@
                   <a href="resume.php" class="nav_link"> <i class='bx bx-spreadsheet nav_icon'></i><span
                   class="nav_name"><?php echo $navArray[5]; ?></span></a>
 
+                  <a href="contact.php" class="nav_link"> <i class='bx bx-envelope nav_icon'></i><span
+                  class="nav_name"><?php echo $navArray[6]; ?></span></a>
+
+                  <a href="admin.php" class="nav_link"> <i class='bx bx-log-in-circle nav_icon' ></i><span
+                  class="nav_name"><?php echo $navArray[7]; ?></span></a>
           </div>
 
           </div>  
