@@ -23,12 +23,12 @@ include_once 'src/head.view.php';
           <h3 class="text-center">Create Post</h3>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Project Title</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title">
           </div>
 
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Languages</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages">
           </div>
 
           <div class="mb-3">
