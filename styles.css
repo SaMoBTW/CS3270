@@ -315,3 +315,9 @@ textarea {
 .login-btn {
   margin-top: 20px;
 }
+
+/* admin home page */
+
+.logout-form {
+  margin-top: 25px;
+}

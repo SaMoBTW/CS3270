@@ -1,11 +1,49 @@
 <?php
 session_start();
 
-// Check if the user is not logged in, redirect to the login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  header("location: admin.php");
-  exit;
+// Check if the user is logged in
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+  // Function to logout
+  function logout()
+  {
+    // Unset all of the session variables
+    $_SESSION = array();
+
+    // Destroy the session cookie
+    if (ini_get("session.use_cookies")) {
+      $params = session_get_cookie_params();
+      setcookie(
+        session_name(),
+        '',
+        time() - 42000,
+        $params["path"],
+        $params["domain"],
+        $params["secure"],
+        $params["httponly"]
+      );
+    }
+
+    // Destroy the session
+    session_destroy();
+
+    // Redirect to the login page
+    header("location: admin.php");
+    exit;
+  }
+
+  // Check if logout button is clicked
+  if (isset($_POST['logout'])) {
+    logout();
+  }
 }
+
+// session_start();
+
+// // Check if the user is not logged in, redirect to the login page
+// if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+//   header("location: admin.php");
+//   exit;
+// }
 ?>
 
 <?php
@@ -21,11 +59,13 @@ include_once 'src/head.view.php';
     
     <header class="header" id="header">
       <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-      <h1 id="course-title">Welcome, <?php echo ucfirst($_SESSION["username"]); ?>
-</h1>
+      <h1 id="course-title"><?php echo ucfirst($_SESSION["username"]); ?>'s Admin page</h1>
       <div class="header_img">
         <img src="images/duckimg.png" alt="">
       </div>
+              <!-- <form method="post" class="logout-form">
+          <button type="submit" name="logout">Logout</button>
+        </form> -->
     </header>
 
     <!-- navigation bar  -->
@@ -33,15 +73,18 @@ include_once 'src/head.view.php';
 
     <!--Content Container start-->
     <main>
-
-        <h1>Home Page</h1>
-        <p><a href="admin.php">Logout</a></p>
+      
+        <!-- <p><a href="admin.php">Logout</a></p> -->
+        <!-- <form method="post" class="logout-form">
+          <button type="submit" name="logout">Logout</button>
+        </form> -->
+        <!-- <button id="submitButton">Submit</button> -->
         
  <div class="container">
     <div class="row">
       <!-- Create Form -->
       <div class="col">
-        <form method="post" action="create.post.php">
+        <form method="post" action="/src/create.post.php">
           <h3 class="text-center">Create Post</h3>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Project Title</label>
