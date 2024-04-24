@@ -10,6 +10,10 @@ $config = parse_ini_file('./config.ini', true);
 $environment = $config['ENVIRONMENT'];
 $URL_BASE = $config[$environment]['URL_BASE'];
 $APP_ROOT = $config[$environment]['APP_ROOT'];
+$DB_NAME = $config[$environment]['APP_ROOT'];
+$DB_HOST = $config[$environment]['APP_ROOT'];
+$DB_USER = $config[$environment]['APP_ROOT']; 
+$DB_PASS = $config[$environment]['APP_ROOT']; 
 
 $navArray = [
     'Home',
