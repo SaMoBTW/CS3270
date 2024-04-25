@@ -1,5 +1,11 @@
 <?php
+session_start();
 
+// Check if the user is already logged in, redirect to the home page
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+  header("location: home.php");
+  exit;
+}
 // Variables and arrays | Data
 include_once 'src/data.view.php';
 

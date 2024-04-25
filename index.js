@@ -35,3 +35,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Your code to run since DOM is loaded and ready
 });
+
+document.getElementById("submitButton").addEventListener("click", function () {
+  document.getElementById("myForm").submit();
+});

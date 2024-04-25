@@ -310,8 +310,14 @@ textarea {
   background: #4723d9;
 }
 
-/* Login Page */
+/* admin Login Page */
 
 .login-btn {
   margin-top: 20px;
+}
+
+/* admin home page */
+
+.logout-form {
+  margin-top: 25px;
 }
