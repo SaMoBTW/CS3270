@@ -1,4 +1,5 @@
 <?php
+include_once 'getposts.php';
 
 $name = 'Samir Mahmoud';
 
@@ -10,10 +11,11 @@ $config = parse_ini_file('./config.ini', true);
 $environment = $config['ENVIRONMENT'];
 $URL_BASE = $config[$environment]['URL_BASE'];
 $APP_ROOT = $config[$environment]['APP_ROOT'];
-$DB_NAME = $config[$environment]['APP_ROOT'];
-$DB_HOST = $config[$environment]['APP_ROOT'];
-$DB_USER = $config[$environment]['APP_ROOT']; 
-$DB_PASS = $config[$environment]['APP_ROOT']; 
+
+// $DB_NAME = $config[$environment]['DB_NAME'];
+// $DB_HOST = $config[$environment]['DB_HOST'];
+// $DB_USER = $config[$environment]['DB_USER']; 
+// $DB_PASS = $config[$environment]['DB_PASS'];
 
 $navArray = [
     'Home',
@@ -59,7 +61,7 @@ $projects =
                 'languages' => 'HTML, CSS, Bootstrap, PHP, Water, Chum',
                 'description' => "Everyone's Favorite fake Mammal.",
                 'link' => "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                'image' => 'images/dolphins.jpg'
+                'image' => '/images/dolphins.jpg'
             ],
         'hippos' =>
             [
@@ -128,11 +130,11 @@ class ProjectCardRenderer
 
 // Login system
 
-// Array to store users and passwords
+// User and password Array
 $users = array(
     'samir' => 'madethesite',
     'justin' => 'likescountry',
-    // Add more users as needed
+
 );
 
 // Define variables and initialize with empty values
@@ -176,20 +178,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
+
+
+
+

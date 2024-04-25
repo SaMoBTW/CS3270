@@ -37,16 +37,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
   }
 }
 
-// session_start();
-
-// // Check if the user is not logged in, redirect to the login page
-// if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-//   header("location: admin.php");
-//   exit;
-// }
-?>
-
-<?php
 
 // Variables and arrays | Data
 include_once 'src/data.view.php';
@@ -63,9 +53,6 @@ include_once 'src/head.view.php';
       <div class="header_img">
         <img src="images/duckimg.png" alt="">
       </div>
-              <!-- <form method="post" class="logout-form">
-          <button type="submit" name="logout">Logout</button>
-        </form> -->
     </header>
 
     <!-- navigation bar  -->
@@ -73,18 +60,11 @@ include_once 'src/head.view.php';
 
     <!--Content Container start-->
     <main>
-      
-        <!-- <p><a href="admin.php">Logout</a></p> -->
-        <!-- <form method="post" class="logout-form">
-          <button type="submit" name="logout">Logout</button>
-        </form> -->
-        <!-- <button id="submitButton">Submit</button> -->
-        
  <div class="container">
     <div class="row">
       <!-- Create Form -->
       <div class="col">
-        <form method="post" action="/src/create.post.php">
+        <form method="post" action="./src/createpost.php">
           <h3 class="text-center">Create Post</h3>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Project Title</label>
@@ -158,5 +138,4 @@ include_once 'src/head.view.php';
     <!-- Navbar Specific Scripts -->
     <?php include_once 'src/navbar.scripts.view.php'; ?>
   </body>
-
 </html>
