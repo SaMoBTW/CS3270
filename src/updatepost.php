@@ -1,6 +1,7 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+    $targetProject = htmlspecialchars($_POST["target-project"]);
     $title = htmlspecialchars($_POST["title"]);
     $languages = htmlspecialchars($_POST["languages"]);
     $description = htmlspecialchars($_POST["description"]);
@@ -10,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 include_once("dbconnect.php");
 
-$query = "INSERT INTO Projects (Title, Languages, Description, Image, link)VALUES ('$title', '$languages', '$description', '$image', '$projectUrl');";
+$query = "UPDATE Projects SET Title = '$title', Image = '$image', Languages = '$languages', Description = '$description', Link = '$projectUrl' WHERE Title = '$targetProject';";
 
 $conn->query($query);
 

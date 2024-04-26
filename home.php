@@ -112,6 +112,42 @@ include_once 'src/head.view.php';
           <button type="submit" class="btn btn-primary">Delete</button>
         </form>
       </div>
+      <!-- Update Form -->
+      <div class="col admin-forms">
+        <form method="post" action="./src/updatepost.php">
+          <h3 class="text-center">Update Post</h3>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Target project</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="target-project">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Project Title</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Languages</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="description"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">Project URL</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" name="project-url">
+            </div>
+          </div>
+                    <div class="mb-3">
+            <input class="form-control" type="file" id="formFile" name="project-image">
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
+
     </div>
   </div>
 

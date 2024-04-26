@@ -11,3 +11,6 @@ echo $title;
 $query = "DELETE FROM Projects WHERE Title = '$title';";
 
 $conn->query($query);
+
+header("Location: ../home.php");
+exit;
