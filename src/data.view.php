@@ -11,7 +11,6 @@ $config = parse_ini_file('./config.ini', true);
 $environment = $config['ENVIRONMENT'];
 $URL_BASE = $config[$environment]['URL_BASE'];
 $APP_ROOT = $config[$environment]['APP_ROOT'];
-
 // $DB_NAME = $config[$environment]['DB_NAME'];
 // $DB_HOST = $config[$environment]['DB_HOST'];
 // $DB_USER = $config[$environment]['DB_USER']; 
