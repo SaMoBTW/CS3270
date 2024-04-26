@@ -1,5 +1,6 @@
 <?php
 include_once('getposts.php');
+include_once('gettitles.php');
 $name = 'Samir Mahmoud';
 
 $personalGitHub = 'https://github.com/SaMoBTW';

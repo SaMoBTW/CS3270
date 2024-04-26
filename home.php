@@ -60,10 +60,14 @@ include_once 'src/head.view.php';
 
     <!--Content Container start-->
     <main>
+      <?php
+        $projectManager = new ProjectTitleManager($conn);
+        $projectManager->displayTitles();
+      ?>
  <div class="container">
     <div class="row">
       <!-- Create Form -->
-      <div class="col">
+      <div class="col admin-forms">
         <form method="post" action="./src/createpost.php">
           <h3 class="text-center">Create Post</h3>
           <div class="mb-3">
@@ -97,33 +101,12 @@ include_once 'src/head.view.php';
       </div>
 
       <!-- Delete Form -->
-      <div class="col">
-        <form>
+      <div class="col admin-forms">
+        <form method="post" action="./src/deletepost.php">
           <h3 class="text-center">Delete Post</h3>
           <div class="mb-3">
-            <label for="exampleInputEmail2" class="form-label">PLACEHOLDER</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
-          </div>
-
-          <div class="mb-3">
-            <label for="exampleInputEmail2" class="form-label">PLACEHOLDER</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
-          </div>
-
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea2" class="form-label">PLACEHOLDER</label>
-            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-          </div>
-
-          <div class="mb-3">
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon4">PLACEHOLDER</span>
-              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <input class="form-control" type="file" id="formFile">
+            <label for="nothing" class="form-label">Project Title</label>
+            <input type="text" class="form-control"  aria-describedby="emailHelp" name="title">
           </div>
 
           <button type="submit" class="btn btn-primary">Delete</button>
