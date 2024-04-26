@@ -12,7 +12,7 @@ include_once 'src/head.view.php';
     <header class="header" id="header">
       <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
       <h1 id="course-title">CS3270 Advanced Web Programming</h1>
-      <a href="admin.php">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
       <div class="header_img">
         <img src="images/duckimg.png" alt="">
       </div>

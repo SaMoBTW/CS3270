@@ -50,9 +50,11 @@ include_once 'src/head.view.php';
     <header class="header" id="header">
       <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
       <h1 id="course-title"><?php echo ucfirst($_SESSION["username"]); ?>'s Admin page</h1>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
       <div class="header_img">
         <img src="images/duckimg.png" alt="">
       </div>
+      </a>
     </header>
 
     <!-- navigation bar  -->
