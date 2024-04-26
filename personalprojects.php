@@ -23,8 +23,10 @@ include_once 'src/head.view.php';
 
         <!-- Project's object -->
        <?php
-       $projectRenderer = new ProjectCardRenderer($projects);
-       $projectRenderer->renderProjectCards();
+        // echo "<div class='row'>";
+        $projectManager = new ProjectManager($conn);
+        $projectManager->displayProjects();
+        // echo "</div>";
        ?>
        <!-- Project's object -->
        
