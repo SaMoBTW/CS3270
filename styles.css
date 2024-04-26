@@ -286,7 +286,7 @@ form {
 }
 
 textarea {
-  height: 150px;
+  height: 125px;
   line-height: 150%;
   resize: vertical;
 }
@@ -329,5 +329,11 @@ textarea {
 .titles-wrapper {
   padding: 0px;
 }
-.project-titles {
+
+.bold {
+  font-weight: bold;
+}
+
+.weather-form {
+  margin-top: 0;
 }

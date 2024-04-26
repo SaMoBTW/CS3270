@@ -3,10 +3,10 @@ session_start();
 
 // Check if the user is logged in
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-  // Function to logout
+
   function logout()
   {
-    // Unset all of the session variables
+
     $_SESSION = array();
 
     // Destroy the session cookie
@@ -23,7 +23,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
       );
     }
 
-    // Destroy the session
+
     session_destroy();
 
     // Redirect to the login page
@@ -31,7 +31,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     exit;
   }
 
-  // Check if logout button is clicked
   if (isset($_POST['logout'])) {
     logout();
   }
@@ -63,8 +62,8 @@ include_once 'src/head.view.php';
     <!--Content Container start-->
     <main>
       <?php
-        $projectManager = new ProjectTitleManager($conn);
-        $projectManager->displayTitles();
+      $projectManager = new ProjectTitleManager($conn);
+      $projectManager->displayTitles();
       ?>
  <div class="container">
     <div class="row">

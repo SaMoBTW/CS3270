@@ -1,6 +1,6 @@
 <?php
-include_once('getposts.php');
-include_once('gettitles.php');
+include_once ('getposts.php');
+include_once ('gettitles.php');
 $name = 'Samir Mahmoud';
 
 $personalGitHub = 'https://github.com/SaMoBTW';
@@ -25,11 +25,8 @@ $navArray = [
     'Resume',
     'Contact Me',
     'Admin',
+    'Weather'
 ];
-
-// Login system
-
-include_once('loginsystem.php')
 
 
 ?>

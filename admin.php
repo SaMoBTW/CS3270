@@ -1,4 +1,5 @@
 <?php
+include ("src/loginsystem.php");
 session_start();
 
 // Check if the user is already logged in, redirect to the home page

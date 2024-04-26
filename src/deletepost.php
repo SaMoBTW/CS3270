@@ -2,9 +2,10 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = htmlspecialchars($_POST["title"]);
-};
+}
+;
 
-include_once("dbconnect.php");
+include_once ("dbconnect.php");
 
 echo $title;
 
