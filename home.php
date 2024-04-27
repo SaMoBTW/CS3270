@@ -115,6 +115,15 @@ include_once 'src/head.view.php';
 
           <button type="submit" class="btn btn-primary">Delete</button>
         </form>
+            <!-- Submission Delete Form -->
+        <form method="post" action="./src/deletesubmission.php">
+          <h3 class="text-center">Delete Submission</h3>
+          <div class="mb-3">
+            <label for="nothing" class="form-label">Sender's Name</label>
+            <input type="text" class="form-control"  aria-describedby="emailHelp" name="sender-name">
+          </div>
+          <button type="submit" class="btn btn-primary">Delete</button>
+        </form>
       </div>
       <!-- Update Form -->
       <div class="col admin-forms">

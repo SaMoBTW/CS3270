@@ -1,14 +1,13 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $title = htmlspecialchars($_POST["title"]);
+    $senderName = htmlspecialchars($_POST["sender-name"]);
 }
 ;
 
 include_once ("dbconnect.php");
 
-
-$query = "DELETE FROM Projects WHERE Title = '$title';";
+$query = "DELETE FROM Messages WHERE name = '$senderName';";
 
 $conn->query($query);
 
