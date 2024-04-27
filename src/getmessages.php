@@ -51,12 +51,12 @@ class MessageManager {
         echo '<div class="row">';
 
         foreach ($submissions as $submission) {
-            echo '<div class="col-md-6">';
+            echo '<div class="col-md-3">';
             echo '<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">';
-
             echo '<div class="feedback-input ">';
-            echo '  <h3 class="text-center">Contact me submissions</h3>';
-            echo '  <p class="feedback-input">'.$submission->getSenderName().'</p>';
+            echo '  <p class="">'.$submission->getSenderName().'</p>';
+            echo '  <p class="">'.$submission->getSenderEmail().'</p>';
+            echo '  <p class="">'.$submission->getSenderMessage().'</p>';
             echo '</div>';
 
             echo '</div>';

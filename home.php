@@ -64,9 +64,6 @@ include_once 'src/head.view.php';
       <?php
       $projectManager = new ProjectTitleManager($conn);
       $projectManager->displayTitles();
-
-      $messageManager = new MessageManager($conn);
-      $messageManager->displayMessages();
       ?>
  <div class="container">
     <div class="row">
@@ -166,7 +163,10 @@ include_once 'src/head.view.php';
   <!-- Contact me submissions -->
   <div class="feedback-input ">
     <h3 class="text-center">Contact me submissions</h3>
-    <p class="feedback-input"></p>
+    <?php 
+          $messageManager = new MessageManager($conn);
+      $messageManager->displayMessages();
+      ?>
   </div>
   <!-- Contact me submissions -->
 
