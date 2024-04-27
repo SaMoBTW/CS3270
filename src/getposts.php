@@ -84,8 +84,6 @@ class ProjectManager {
 
             echo '</div>';
             echo '</div>';
-
-
         }
         echo '</div>';
     }

@@ -64,6 +64,9 @@ include_once 'src/head.view.php';
       <?php
       $projectManager = new ProjectTitleManager($conn);
       $projectManager->displayTitles();
+
+      $messageManager = new MessageManager($conn);
+      $messageManager->displayMessages();
       ?>
  <div class="container">
     <div class="row">
@@ -148,9 +151,15 @@ include_once 'src/head.view.php';
             <input class="form-control" type="file" id="formFile" name="project-image">
           </div>
           <button type="submit" class="btn btn-primary">Update</button>
-
     </div>
   </div>
+
+  <!-- Contact me submissions -->
+  <div class="feedback-input ">
+    <h3 class="text-center">Contact me submissions</h3>
+    <p class="feedback-input"></p>
+  </div>
+  <!-- Contact me submissions -->
 
     </main>
     <!--Content Container end-->
