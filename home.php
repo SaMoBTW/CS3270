@@ -72,18 +72,22 @@ include_once 'src/head.view.php';
         <form method="post" action="./src/createpost.php">
           <h3 class="text-center">Create Post</h3>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Project Title</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="Project Title">
           </div>
 
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Languages</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages" placeholder="Languages">
           </div>
 
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" placeholder="Description"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">Project Page</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" name="project-page">
+            </div>
           </div>
 
           <div class="mb-3">
@@ -106,8 +110,7 @@ include_once 'src/head.view.php';
         <form method="post" action="./src/deletepost.php">
           <h3 class="text-center">Delete Post</h3>
           <div class="mb-3">
-            <label for="nothing" class="form-label">Project Title</label>
-            <input type="text" class="form-control"  aria-describedby="emailHelp" name="title">
+            <input type="text" class="form-control"  aria-describedby="emailHelp" name="title" placeholder="Project Title">
           </div>
 
           <button type="submit" class="btn btn-primary">Delete</button>
@@ -116,8 +119,7 @@ include_once 'src/head.view.php';
         <form method="post" action="./src/deletesubmission.php">
           <h3 class="text-center">Delete Submission</h3>
           <div class="mb-3">
-            <label for="nothing" class="form-label">Sender's Name</label>
-            <input type="text" class="form-control"  aria-describedby="emailHelp" name="sender-name">
+            <input type="text" class="form-control"  aria-describedby="emailHelp" name="sender-name" placeholder="Sender's Name">
           </div>
           <button type="submit" class="btn btn-primary">Delete</button>
         </form>
@@ -128,23 +130,26 @@ include_once 'src/head.view.php';
           <h3 class="text-center">Update Post</h3>
 
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Target project</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="target-project">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="target-project" placeholder="Target project">
           </div>
 
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Project Title</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="Project Title">
           </div>
 
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Languages</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages" placeholder="Languages">
           </div>
 
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="description"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="description" placeholder="Description"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">Project Page</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" name="project-page">
+            </div>
           </div>
 
           <div class="mb-3">

@@ -6,12 +6,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $languages = htmlspecialchars($_POST["languages"]);
     $description = htmlspecialchars($_POST["description"]);
     $projectUrl = htmlspecialchars($_POST["project-url"]);
+    $projectPage = htmlspecialchars($_POST["project-page"]);
     $image = "/images/" . htmlspecialchars($_POST["project-image"]);
 };
 
 include_once("dbconnect.php");
 
-$query = "UPDATE Projects SET Title = '$title', Image = '$image', Languages = '$languages', Description = '$description', Link = '$projectUrl' WHERE Title = '$targetProject';";
+$query = "UPDATE Projects SET Title = '$title', Image = '$image', Languages = '$languages', Description = '$description', Link = '$projectUrl',File = '$projectPage' WHERE Title = '$targetProject';";
 
 $conn->query($query);
 

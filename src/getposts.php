@@ -7,13 +7,15 @@ class Project {
     private $languages;
     private $description;
     private $link;
+    private $projectPage;
 
-    public function __construct($title, $image, $languages, $description, $link) {
+    public function __construct($title, $image, $languages, $description, $link, $projectPage) {
         $this->title = $title;
         $this->image = $image;
         $this->languages = $languages;
         $this->description = $description;
         $this->link = $link;
+        $this->projectPage = $projectPage;
     }
 
     public function getTitle() {
@@ -35,6 +37,10 @@ class Project {
     public function getLink() {
         return $this->link;
     }
+
+    public function getProjectPage() {
+    return $this->projectPage;
+    }
 }
 
 class ProjectManager {
@@ -50,7 +56,7 @@ class ProjectManager {
         $projects = [];
 
         foreach ($stmt as $row) {
-            $project = new Project($row["Title"], $row["Image"], $row["Languages"], $row["Description"], $row["Link"]);
+            $project = new Project($row["Title"], $row["Image"], $row["Languages"], $row["Description"], $row["Link"],$row["File"]);
             $projects[] = $project;
         }
 
@@ -78,6 +84,7 @@ class ProjectManager {
 
             if (!empty($project->getLink())) {
                 echo '<a href="' . $project->getLink() . '" target="_blank" class="stretched-link btn-primary gap left-margin purple-text">Github Repo</a>';
+                echo '<a href="projects/' . $project->getProjectPage() . '" target="_blank" class="stretched-link btn-primary gap left-margin purple-text">Project Page</a>';
             }
 
             echo '</div>';
