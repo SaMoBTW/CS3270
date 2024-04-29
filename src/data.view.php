@@ -6,7 +6,7 @@ $personalGitHub = 'https://github.com/SaMoBTW';
 
 $siteRepo = 'https://github.com/SaMoBTW/CS3270';
 
-$config = parse_ini_file('C:\Users\SaMo\Documents\GitHub\CS3270\config.ini', true);
+$config = parse_ini_file('config.ini', true);
 if ($config === false) {
     die('Error: Unable to parse config.ini file');
 }
