@@ -83,8 +83,8 @@ class ProjectManager {
             echo '<h5 class="card-text mb-auto gap left-margin">' . $project->getDescription() . '</h5>';
 
             if (!empty($project->getLink())) {
-                echo '<a href="' . $project->getLink() . '" target="_blank" class="stretched-link btn-primary gap left-margin purple-text">Github Repo</a>';
-                echo '<a href="projects/' . $project->getProjectPage() . '" target="_blank" class="stretched-link btn-primary gap left-margin purple-text">Project Page</a>';
+                echo '<a href="' . $project->getLink() . '" target="_blank" class="left-margin purple-text">Github Repo</a>';
+                echo '<a href="' . $project->getProjectPage() . '" target="_blank" class=" left-margin purple-text">Project Page</a>';
             }
 
             echo '</div>';

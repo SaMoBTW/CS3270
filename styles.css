@@ -736,24 +736,22 @@ img {
 /* Project page */
 
 #about-section {
-  background: rgba(32, 33, 36, 0.1);
   margin-top: 5%;
 }
 
 .blockabout {
   padding: 20px;
-  background: white;
+  border: 1px solid #4723d9;
 }
 
 .blockabout-inner {
   padding: 30px;
-  border: 1px solid rgba(32, 33, 36, 0.1);
 }
 
 .sosmed-horizontal a i {
   border: 1px solid #070707;
   border-radius: 50%;
-  color: #070707;
+  color: #4723d9;
   display: inline-block;
   height: 30px;
   width: 30px;
@@ -773,4 +771,16 @@ img {
   font-weight: 700;
   border-radius: 50px;
   transition: all 0.3s;
+}
+
+.live-page {
+  border: 1px solid #4723d9;
+}
+
+.description-p {
+  color: #4723d9;
+}
+
+.screenshot {
+  margin-top: 15%;
 }
