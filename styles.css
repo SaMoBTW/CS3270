@@ -784,3 +784,21 @@ img {
 .screenshot {
   margin-top: 15%;
 }
+
+.index-page {
+  background-color: #f7f6fb;
+  color: #4723d9;
+}
+
+.intro-p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+.index-h1 {
+  font-family: "Pacifico";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 75px;
+}

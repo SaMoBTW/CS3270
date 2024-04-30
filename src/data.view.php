@@ -31,7 +31,8 @@ $navArray = [
     'Resume',
     'Contact Me',
     'Admin',
-    'Weather'
+    'Weather',
+    'Experience'
 ];
 
 
