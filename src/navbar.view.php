@@ -33,7 +33,7 @@
                   <a href="weather.php" class="nav_link"> <i class='bx bx-cloud nav_icon'></i><span
                   class="nav_name"><?php echo $navArray[8]; ?></span></a>
 
-                  <a href="weather.php" class="nav_link"> <i class='bx bx-briefcase-alt-2'></i><span
+                  <a href="experience.php" class="nav_link"> <i class='bx bx-briefcase-alt-2'></i><span
                   class="nav_name"><?php echo $navArray[9]; ?></span></a>
           </div>
           
