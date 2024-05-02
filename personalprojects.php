@@ -11,9 +11,11 @@ include_once 'src/head.view.php';
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
         <h1 id="course-title">Personal Projects</h1>
-        <div class="header_img">
-            <img src="images/duckimg.png" alt="">
-        </div>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+      <div class="header_img">
+        <img src="images/duckimg.png" alt="">
+      </div>
+      </a>
     </header>
     
     <!-- navigation bar  -->
@@ -23,8 +25,8 @@ include_once 'src/head.view.php';
 
         <!-- Project's object -->
        <?php
-       $projectRenderer = new ProjectCardRenderer($projects);
-       $projectRenderer->renderProjectCards();
+        $projectManager = new ProjectManager($conn);
+        $projectManager->displayProjects();
        ?>
        <!-- Project's object -->
        

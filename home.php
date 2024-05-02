@@ -3,10 +3,10 @@ session_start();
 
 // Check if the user is logged in
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-  // Function to logout
+
   function logout()
   {
-    // Unset all of the session variables
+
     $_SESSION = array();
 
     // Destroy the session cookie
@@ -23,7 +23,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
       );
     }
 
-    // Destroy the session
+
     session_destroy();
 
     // Redirect to the login page
@@ -31,7 +31,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     exit;
   }
 
-  // Check if logout button is clicked
   if (isset($_POST['logout'])) {
     logout();
   }
@@ -50,9 +49,11 @@ include_once 'src/head.view.php';
     <header class="header" id="header">
       <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
       <h1 id="course-title"><?php echo ucfirst($_SESSION["username"]); ?>'s Admin page</h1>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
       <div class="header_img">
         <img src="images/duckimg.png" alt="">
       </div>
+      </a>
     </header>
 
     <!-- navigation bar  -->
@@ -60,25 +61,33 @@ include_once 'src/head.view.php';
 
     <!--Content Container start-->
     <main>
+      <?php
+      $projectManager = new ProjectTitleManager($conn);
+      $projectManager->displayTitles();
+      ?>
  <div class="container">
     <div class="row">
       <!-- Create Form -->
-      <div class="col">
+      <div class="col admin-forms">
         <form method="post" action="./src/createpost.php">
           <h3 class="text-center">Create Post</h3>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Project Title</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="Project Title">
           </div>
 
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Languages</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages" placeholder="Languages">
           </div>
 
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" placeholder="Description"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">Project Page</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" name="project-page">
+            </div>
           </div>
 
           <div class="mb-3">
@@ -97,40 +106,74 @@ include_once 'src/head.view.php';
       </div>
 
       <!-- Delete Form -->
-      <div class="col">
-        <form>
+      <div class="col admin-forms">
+        <form method="post" action="./src/deletepost.php">
           <h3 class="text-center">Delete Post</h3>
           <div class="mb-3">
-            <label for="exampleInputEmail2" class="form-label">PLACEHOLDER</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
-          </div>
-
-          <div class="mb-3">
-            <label for="exampleInputEmail2" class="form-label">PLACEHOLDER</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
-          </div>
-
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea2" class="form-label">PLACEHOLDER</label>
-            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-          </div>
-
-          <div class="mb-3">
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon4">PLACEHOLDER</span>
-              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <input class="form-control" type="file" id="formFile">
+            <input type="text" class="form-control"  aria-describedby="emailHelp" name="title" placeholder="Project Title">
           </div>
 
           <button type="submit" class="btn btn-primary">Delete</button>
         </form>
+            <!-- Submission Delete Form -->
+        <form method="post" action="./src/deletesubmission.php">
+          <h3 class="text-center">Delete Submission</h3>
+          <div class="mb-3">
+            <input type="text" class="form-control"  aria-describedby="emailHelp" name="sender-name" placeholder="Sender's Name">
+          </div>
+          <button type="submit" class="btn btn-primary">Delete</button>
+        </form>
       </div>
+      <!-- Update Form -->
+      <div class="col admin-forms">
+        <form method="post" action="./src/updatepost.php">
+          <h3 class="text-center">Update Post</h3>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="target-project" placeholder="Target project">
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="Project Title">
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="languages" placeholder="Languages">
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="description" placeholder="Description"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">Project Page</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" name="project-page">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">Project URL</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" name="project-url">
+            </div>
+          </div>
+                    <div class="mb-3">
+            <input class="form-control" type="file" id="formFile" name="project-image">
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
     </div>
   </div>
+
+  <!-- Contact me submissions -->
+  <div class="feedback-input ">
+    <h3 class="text-center">Contact me submissions</h3>
+    <?php 
+          $messageManager = new MessageManager($conn);
+      $messageManager->displayMessages();
+      ?>
+  </div>
+  <!-- Contact me submissions -->
 
     </main>
     <!--Content Container end-->
