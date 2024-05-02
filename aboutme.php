@@ -6,8 +6,6 @@ include_once 'src/data.view.php';
 include_once 'src/head.view.php';
 ?>
 
-
-
     <body id="body-pd">
         <header class="header" id="header">
             <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
@@ -23,7 +21,7 @@ include_once 'src/head.view.php';
         <?php include_once('src/navbar.view.php') ?>
 
         <!--Container Main start-->
-        <?php include_once("src/aboutme.view.php") ?>
+        <?php include_once('src/newaboutme.view.php') ?>
         <!--Container Main end-->
 
         <!-- Navbar Specific Scripts -->
